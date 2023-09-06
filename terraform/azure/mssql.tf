@@ -207,6 +207,7 @@ resource "azurerm_mssql_server_security_alert_policy" "alertpolicy4" {
 }
 
 resource "azurerm_mssql_server_security_alert_policy" "alertpolicy5" {
+  email_addresses = ["example@gmail.com"]
   resource_group_name        = azurerm_resource_group.example.name
   server_name                = azurerm_mssql_server.mssql5.name
   state                      = "Enabled"
